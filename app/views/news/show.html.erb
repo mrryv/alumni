@@ -34,19 +34,6 @@
           <textarea id="article" name="article" placeholder="Article Contents"></textarea>
           <%= file_field_tag 'image', accept: 'image/*' %>
         </td>
-        <td colspan=2>
-          <select id="campus" name="campus" onchange="getColleges(this)">
-            <% @campus.each do |c| %>
-              <option value='<%= c.id %>'><%= c.name.capitalize %></option>
-            <% end %>
-          </select>
-          <select id="colleges" name="colleges" onchange="getCourses(this)">
-          </select>
-          <select id="courses" name="courses" onchange="getBatches(this)">
-          </select>
-          <select id="batches" name="batches">
-          </select>
-        </td>
         <% end %>
       </tr>
     </tbody>
