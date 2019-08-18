@@ -9,12 +9,10 @@
         <tr>
           <th colspan=4>
             <%= form_tag(reports_search_path, method: :post, id: 'reports_form') do %>
-              <select id="campus" name="campus" onchange="getColleges(this)">
-                <% @campus.each do |c| %>
+              <select id="colleges" name="colleges" onchange="getCourses(this)">
+                <% @colleges.each do |c| %>
                   <option value='<%= c.id %>'><%= c.name.capitalize %></option>
                 <% end %>
-              </select>
-              <select id="colleges" name="colleges" onchange="getCourses(this)">
               </select>
               <select id="courses" name="courses" onchange="getBatches(this)">
               </select>
