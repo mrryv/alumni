@@ -32,13 +32,7 @@
         <tr>
           <%= form_tag(event_create_path, method: :post, id: 'event_form') do %>
           <td><button class="btn btn-primary" type="submit">Create</button></td>
-          <td>
-            <select id="event_type" name="event_type">
-              <% @event_types.each do |e| %>
-                <option value='<%= e.id %>'><%= e.name.capitalize %></option>
-              <% end %>
-            </select>
-          </td>
+          
           <td><input type="text" id="name" name="name" placeholder="Name"></td>
           <td><input type="text" id="venue" name="venue" placeholder="Venue"></td>
           <td><input type="text" id="date" name="date" placeholder="<%= DateTime.now.strftime('%F') %>"></td>
