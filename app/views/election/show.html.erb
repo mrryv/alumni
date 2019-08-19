@@ -15,7 +15,6 @@
       <% @elections.each do |e| %>
         <tr>
           <td><%= e.id %></td>
-          <td><%= e.name.capitalize %></td>
           <td><%= e.date.strftime('%F') %></td>
           <!--td><button>Edit</button></td-->
           <td><a class="btn btn-danger" href="<%= election_delete_path(e.id) %>">Delete</a></td>
